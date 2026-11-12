@@ -7,7 +7,7 @@ import { useCart } from '@/stores/cart'
 import { useWishlist } from '@/stores/wishlist'
 import { Button } from '@/components/ui/Button'
 import { Spinner } from '@/components/ui/Spinner'
-import { getProductImage } from '@/utils/productImages'
+import { getProductDisplay } from '@/utils/productImages'
 
 export function ProductPage() {
   const { slug = '' } = useParams()
@@ -23,63 +23,62 @@ export function ProductPage() {
   if (isLoading) return <div className="flex justify-center py-24"><Spinner /></div>
   if (!data) return <div className="container-lux py-20 text-center">{t.shop.noResults}</div>
 
-  const saved = has(data.id)
-  const imageUrl = getProductImage(data.slug, data.title)
+  const display = getProductDisplay({
+    slug: data.slug,
+    title: data.title,
+    brand: data.brand,
+    description: data.description,
+  })
+  const title = display.title || data.title
+  const brand = display.brand || data.brand
+  const description = display.description || data.description
 
   return (
     <div className="container-lux py-12">
       <div className="grid gap-12 lg:grid-cols-2">
-        <div className="relative aspect-square overflow-hidden rounded-sm bg-[var(--border)] shadow-soft">
+        <div className="relative aspect-square overflow-hidden rounded-sm bg-[var(--border)]">
           <img
-            src={imageUrl}
-            alt={data.title}
+            src={display.imageUrl}
+            alt={title}
             className="h-full w-full object-cover"
           />
         </div>
         <div>
-          {data.brand && <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">{data.brand}</p>}
-          <h1 className="mt-2 font-display text-4xl md:text-5xl">{data.title}</h1>
+          {brand && <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">{brand}</p>}
+          <h1 className="mt-2 font-display text-4xl md:text-5xl">{title}</h1>
           <p className="mt-4 text-2xl font-semibold">${data.basePrice.toLocaleString()}</p>
           <p className="mt-2 text-sm text-[var(--muted)]">{t.product.seller}: Boutique</p>
-          <p className="mt-8 leading-relaxed text-[var(--muted)]">{data.description}</p>
+          <p className="mt-8 leading-relaxed text-[var(--muted)]">{description}</p>
 
           <div className="mt-8 flex items-center gap-4">
             <label className="text-sm">
               Qty
-              <input
-                className="input ml-2 w-20"
-                type="number"
-                min={1}
-                max={99}
-                value={qty}
-                onChange={(e) => setQty(Math.max(1, Number(e.target.value)))}
-              />
+              <input className="input ml-2 w-20" type="number" min={1} max={10} value={qty} onChange={(e) => setQty(Number(e.target.value))} />
             </label>
+          </div>
+          <div className="mt-6 flex flex-wrap gap-3">
             <Button
-              onClick={() => {
-                const variantId = (data as { variantId?: string }).variantId
+              onClick={() =>
                 add({
                   productId: data.id,
-                  variantId,
-                  title: data.title,
+                  title,
                   price: data.basePrice,
                   quantity: qty,
+                  boutiqueId: data.boutiqueId,
+                  variantId: (data as { variantId?: string }).variantId,
                 })
-              }}
+              }
             >
               {t.product.addToCart}
             </Button>
-            <Button
-              variant="outline"
-              onClick={() => toggle({ productId: data.id, title: data.title, price: data.basePrice })}
-            >
-              {saved ? '♥' : t.product.addWishlist}
+            <Button variant="outline" onClick={() => toggle({ productId: data.id, title, price: data.basePrice })}>
+              {has(data.id) ? '♥' : t.product.addWishlist}
             </Button>
           </div>
-
-          <div className="mt-12 border-t border-[var(--border)] pt-8 text-xs text-[var(--muted)]">
-            <Link to="/shop" className="hover:text-champagne">← {t.common.back}</Link>
-          </div>
+          <p className="mt-6 text-xs text-[var(--muted)]">
+            Reviews require a verified purchase · eligibility enforced by backend when available.
+          </p>
+          <Link to="/shop" className="mt-8 inline-block text-sm text-champagne hover:underline">{t.common.back}</Link>
         </div>
       </div>
     </div>
