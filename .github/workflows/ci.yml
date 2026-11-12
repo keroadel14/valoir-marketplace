@@ -1,0 +1,48 @@
+name: VALOIR CI
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master, develop ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Restore
+        run: dotnet restore
+        working-directory: .
+
+      - name: Build
+        run: dotnet build --no-restore -c Release
+        working-directory: .
+
+      - name: Unit tests
+        run: dotnet test tests/Valoir.UnitTests/Valoir.UnitTests.csproj --no-build -c Release --logger "trx;LogFileName=unit.trx"
+        working-directory: .
+
+      - name: Integration tests (Testcontainers)
+        run: dotnet test tests/Valoir.IntegrationTests/Valoir.IntegrationTests.csproj -c Release --logger "trx;LogFileName=integration.trx"
+        working-directory: .
+        env:
+          # Testcontainers uses local Docker on the runner
+          TESTCONTAINERS_RYUK_DISABLED: "true"
+          VALOIR_REQUIRE_DOCKER: "1"
+          CI: "true"
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: "**/TestResults/*.trx"
