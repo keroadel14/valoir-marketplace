@@ -57,7 +57,7 @@ export function ProductPage() {
             </label>
             <Button
               onClick={() => {
-                const variantId = data.variants?.[0]?.id ?? 'default'
+                const variantId = (data as { variantId?: string }).variantId
                 add({
                   productId: data.id,
                   variantId,
@@ -73,7 +73,7 @@ export function ProductPage() {
               variant="outline"
               onClick={() => toggle({ productId: data.id, title: data.title, price: data.basePrice })}
             >
-              {saved ? t.product.wishlisted : t.product.wishlist}
+              {saved ? '♥' : t.product.addWishlist}
             </Button>
           </div>
 
