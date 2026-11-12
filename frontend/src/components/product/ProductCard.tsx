@@ -3,19 +3,24 @@ import { Heart } from 'lucide-react'
 import type { ProductListItem } from '@/types'
 import { useWishlist } from '@/stores/wishlist'
 import { clsx } from 'clsx'
+import { getProductImage } from '@/utils/productImages'
 
 export function ProductCard({ product }: { product: ProductListItem }) {
   const { toggle, has } = useWishlist()
   const saved = has(product.id)
+  const imageUrl = getProductImage(product.slug, product.title)
+
   return (
     <article className="group relative flex flex-col">
-      <Link to={`/product/${product.slug}`} className="relative aspect-[3/4] overflow-hidden bg-[var(--border)]">
-        <div className="absolute inset-0 bg-gradient-to-br from-ivory-200 to-charcoal/10 dark:from-charcoal-100 dark:to-charcoal-900" />
-        <div className="absolute inset-0 flex items-center justify-center font-display text-4xl text-charcoal/20 dark:text-white/10">
-          {product.title.charAt(0)}
-        </div>
+      <Link to={`/product/${product.slug}`} className="relative aspect-[3/4] overflow-hidden rounded-sm bg-[var(--border)]">
+        <img
+          src={imageUrl}
+          alt={product.title}
+          loading="lazy"
+          className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105"
+        />
         {product.isFeatured && (
-          <span className="absolute start-3 top-3 bg-champagne px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-charcoal">
+          <span className="absolute start-3 top-3 bg-champagne px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-charcoal shadow-sm">
             Featured
           </span>
         )}
@@ -24,8 +29,8 @@ export function ProductCard({ product }: { product: ProductListItem }) {
         type="button"
         aria-label="Wishlist"
         className={clsx(
-          'absolute end-3 top-3 rounded-full bg-white/90 p-2 shadow-soft transition dark:bg-charcoal-100',
-          saved && 'text-champagne',
+          'absolute end-3 top-3 rounded-full bg-white/90 p-2 shadow-soft transition dark:bg-charcoal-100 dark:text-white',
+          saved && '!text-champagne',
         )}
         onClick={() =>
           toggle({ productId: product.id, title: product.title, price: product.basePrice })
@@ -38,7 +43,7 @@ export function ProductCard({ product }: { product: ProductListItem }) {
         <Link to={`/product/${product.slug}`} className="font-medium leading-snug hover:text-champagne">
           {product.title}
         </Link>
-        <p className="text-sm">${product.basePrice.toLocaleString()}</p>
+        <p className="text-sm font-semibold">${product.basePrice.toLocaleString()}</p>
       </div>
     </article>
   )
