@@ -4,59 +4,86 @@
 
 @layer base {
   :root {
-    --bg: #FBFBF9;
+    /* Quiet Luxury - Light Mode (Vespera / Brunello Cucinelli palette) */
+    --bg: #FAF8F5;
     --surface: #FFFFFF;
-    --text: #0B0F17;
-    --muted: #64748B;
-    --border: #E8E6E1;
-    --accent: #D4AF37;
+    --text: #1C1B1A;
+    --muted: #7E7870;
+    --border: #E8E2D8;
+    --accent: #B89768;
+    --accent-hover: #9E7E52;
   }
+
   .dark {
-    --bg: #070A0F;
-    --surface: #0F1523;
-    --text: #F8FAFC;
-    --muted: #94A3B8;
-    --border: #1E293B;
-    --accent: #E5C158;
+    /* Gold & Elegance - Dark Mode (Deep Obsidian & Champagne Gold) */
+    --bg: #0C0D0E;
+    --surface: #141619;
+    --text: #F5F3EF;
+    --muted: #8E8A83;
+    --border: #24221F;
+    --accent: #D4AF37;
+    --accent-hover: #E5C158;
   }
-  html { scroll-behavior: smooth; }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    background: var(--bg);
+    background-color: var(--bg);
     color: var(--text);
-    font-family: Inter, system-ui, sans-serif;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.01em;
   }
-  html[dir='rtl'] body { font-family: "IBM Plex Sans Arabic", Tahoma, sans-serif; }
-  h1, h2, h3, .font-display {
+
+  html[dir='rtl'] body {
+    font-family: "IBM Plex Sans Arabic", Tahoma, sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-display {
     font-family: "Cormorant Garamond", Georgia, serif;
+    letter-spacing: -0.02em;
   }
-  html[dir='rtl'] h1, html[dir='rtl'] h2, html[dir='rtl'] h3, html[dir='rtl'] .font-display {
+
+  html[dir='rtl'] h1, 
+  html[dir='rtl'] h2, 
+  html[dir='rtl'] h3, 
+  html[dir='rtl'] h4, 
+  html[dir='rtl'] .font-display {
     font-family: "IBM Plex Sans Arabic", Tahoma, sans-serif;
   }
 }
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-sm px-5 py-2.5 text-sm font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-champagne disabled:opacity-50;
+    @apply inline-flex items-center justify-center gap-2 rounded-none px-6 py-3 text-xs font-medium uppercase tracking-[0.2em] transition-all duration-300 focus:outline-none disabled:opacity-50;
   }
+
   .btn-primary {
-    @apply btn bg-charcoal text-ivory hover:bg-charcoal/90 dark:bg-champagne dark:text-charcoal dark:hover:bg-champagne-light;
+    @apply btn bg-[#1C1B1A] text-[#FAF8F5] hover:bg-[#34312D] dark:bg-[#D4AF37] dark:text-[#0C0D0E] dark:hover:bg-[#E5C158] dark:shadow-[0_0_20px_rgba(212,175,55,0.25)];
   }
+
   .btn-outline {
-    @apply btn border border-[var(--border)] bg-transparent hover:border-champagne hover:text-champagne;
+    @apply btn border border-[var(--border)] bg-transparent text-[var(--text)] hover:border-[#D4AF37] hover:text-[#D4AF37] dark:border-[#2E2B25] dark:hover:border-[#D4AF37];
   }
+
   .btn-ghost {
     @apply btn hover:bg-black/5 dark:hover:bg-white/5;
   }
+
   .input {
-    @apply w-full rounded-sm border border-[var(--border)] bg-[var(--surface)] px-3 py-2.5 text-sm outline-none transition focus:border-champagne focus:ring-1 focus:ring-champagne;
+    @apply w-full rounded-none border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm outline-none transition-colors duration-300 focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] dark:border-[#24221F] dark:bg-[#141619];
   }
+
   .card {
-    @apply rounded-sm border border-[var(--border)] bg-[var(--surface)] shadow-soft;
+    @apply rounded-none border border-[var(--border)] bg-[var(--surface)] transition-all duration-500 hover:border-[#D4AF37]/40 dark:border-[#24221F] dark:bg-[#141619] dark:hover:border-[#D4AF37]/50 dark:hover:shadow-[0_4px_25px_rgba(212,175,55,0.1)];
   }
+
   .container-lux {
     @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
   }
+
   .section-title {
-    @apply font-display text-3xl md:text-4xl font-semibold tracking-tight;
+    @apply font-display text-3xl md:text-4xl font-normal tracking-tight;
   }
 }
