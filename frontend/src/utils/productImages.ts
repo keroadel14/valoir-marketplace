@@ -66,7 +66,7 @@ export const LUXURY_120_CATALOG: CatalogItem[] = [
   { id: 46, category: 'bags', brand: 'Hermès', title: 'Sleek Leather Portfolio Envelope', imageUrl: 'https://images.unsplash.com/photo-1524498250077-390f9e378fc0?q=80&w=800&auto=format&fit=crop', description: 'Streamlined document sleeve crafted from Epsom calfskin with palladium clasp.' },
   { id: 47, category: 'bags', brand: 'Prada', title: 'Grained Leather Camera Bag', imageUrl: 'https://images.unsplash.com/photo-1594223274512-ad4803739b7c?q=80&w=800&auto=format&fit=crop', description: 'Twin zip compartments with detachable webbing strap and enamelled triangle plaque.' },
   { id: 48, category: 'bags', brand: 'Loewe', title: 'Raffia Tote with Leather Accents', imageUrl: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop', description: 'Hand-woven palm leaf basket finished with adjustable calfskin handles.' },
-  { id: 49, category: 'bags', brand: 'Bottega Veneta', title: 'Glove Leather Pouch Clutch', imageUrl: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop', description: 'Voluminous magnetic frame clutch crafted from butter-soft gathered lambskin.' },
+  { id: 49, category: 'bags', brand: 'Bottega Veneta', title: 'Glove Leather Pouch Clutch', imageUrl: 'https://images.unsplash.com/photo-1591561954555-607968c989ab?q=80&w=800&auto=format&fit=crop', description: 'Voluminous magnetic frame clutch crafted from butter-soft gathered lambskin.' },
   { id: 50, category: 'bags', brand: 'Rimowa', title: 'Executive Travel Suitcase 30L', imageUrl: 'https://images.unsplash.com/photo-1563903530908-afdd155d057a?q=80&w=800&auto=format&fit=crop', description: 'Anodized aluminum grooved shell with ball-bearing wheels and TSA combination locks.' },
 
   { id: 51, category: 'electronics', brand: 'Bang & Olufsen', title: 'Wireless Over-Ear Studio Headphones', imageUrl: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=800&auto=format&fit=crop', description: 'Custom titanium drivers, memory foam lambskin pads, and active noise cancellation.' },
@@ -96,7 +96,7 @@ export const LUXURY_120_CATALOG: CatalogItem[] = [
   { id: 74, category: 'home', brand: 'Brunello Cucinelli', title: 'Cashmere & Silk Fringed Throw Blanket', imageUrl: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?q=80&w=800&auto=format&fit=crop', description: 'Double-faced weave combining Mongolian cashmere with lustrous raw silk.' },
   { id: 75, category: 'home', brand: 'Pierre Paulin', title: 'Sculptural Lounge Chair in Bouclé', imageUrl: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=800&auto=format&fit=crop', description: 'Organic curved geometry upholstered in plush ivory wool bouclé fabric.' },
   { id: 76, category: 'home', brand: 'Menu Space', title: 'Calacatta Viola Marble Coffee Table', imageUrl: 'https://images.unsplash.com/photo-1540932239986-30128078f3c5?q=80&w=800&auto=format&fit=crop', description: 'Honed purple-veined marble slab resting on monolithic plinth bases.' },
-  { id: 77, category: 'home', brand: 'Hans Wegner', title: 'Solid Oak Dining Chair with Cane Back', imageUrl: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=800&auto=format&fit=crop', description: 'Steam-bent natural oak frame featuring hand-woven rattan papercord seat.' },
+  { id: 77, category: 'home', brand: 'Hans Wegner', title: 'Solid Oak Dining Chair with Cane Back', imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=800&auto=format&fit=crop', description: 'Steam-bent natural oak frame featuring hand-woven rattan papercord seat.' },
   { id: 78, category: 'home', brand: 'Venini', title: 'Blown Murano Glass Decanter & Tumblers', imageUrl: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=800&auto=format&fit=crop', description: 'Handmade by Venetian master glassmakers with smoke grey optic ribbing.' },
   { id: 79, category: 'home', brand: 'Cire Trudon', title: 'Scented Botanical Soy Wax Candle', imageUrl: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=800&auto=format&fit=crop', description: 'Poured in hand-blown green glass jar with notes of Moroccan cedar and tobacco.' },
   { id: 80, category: 'home', brand: 'Aesop', title: 'Cast Bronze Desktop Incense Burner', imageUrl: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=800&auto=format&fit=crop', description: 'Solid asymmetric bronze vessel designed by Studio Henry Wilson.' },
@@ -104,7 +104,7 @@ export const LUXURY_120_CATALOG: CatalogItem[] = [
   { id: 82, category: 'home', brand: 'Fort Standard', title: 'Monolithic Stone Bookends (Pair)', imageUrl: 'https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=800&auto=format&fit=crop', description: 'Pair of honed slate pillars with felt base to support heavy library volumes.' },
   { id: 83, category: 'home', brand: 'Hasami Porcelain', title: 'Handmade Ceramic Pour-Over Dripper', imageUrl: 'https://images.unsplash.com/photo-1532323544230-7191fd51bc1b?q=80&w=800&auto=format&fit=crop', description: 'Matte stoneware with unglazed textured finish, crafted in historic Nagasaki.' },
   { id: 84, category: 'home', brand: 'Muuto', title: 'Minimalist Concrete Fruit Bowl', imageUrl: 'https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?q=80&w=800&auto=format&fit=crop', description: 'Raw cast concrete polished smooth on the interior, leaving subtle micro-air holes.' },
-  { id: 85, category: 'home', brand: 'Vespera Atelier', title: 'Raw Silk Textured Accent Pillow', imageUrl: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop', description: 'Feather-down insert wrapped in slubbed hand-spun ivory raw silk cover.' },
+  { id: 85, category: 'home', brand: 'Vespera Atelier', title: 'Raw Silk Textured Accent Pillow', imageUrl: 'https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?q=80&w=800&auto=format&fit=crop', description: 'Feather-down insert wrapped in slubbed hand-spun ivory raw silk cover.' },
 
   { id: 86, category: 'beauty', brand: 'Le Labo', title: 'Amber & Cedarwood Eau de Parfum', imageUrl: 'https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=800&auto=format&fit=crop', description: 'Rich accord of dry amber, smoked cedar, and Haitian vetiver in refillable bottle.' },
   { id: 87, category: 'beauty', brand: 'Vintner\'s Daughter', title: 'Botanical Facial Oil with Rosehip', imageUrl: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop', description: 'Infusion of 22 active botanical extracts formulated to nourish and restore skin elasticity.' },
@@ -115,34 +115,34 @@ export const LUXURY_120_CATALOG: CatalogItem[] = [
   { id: 92, category: 'beauty', brand: 'Jo Malone', title: 'Smoked Vetiver & Bergamot Cologne', imageUrl: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=800&auto=format&fit=crop', description: 'Sparkling Calabrian bergamot anchored by earthy Javanese vetiver and clean musk.' },
   { id: 93, category: 'beauty', brand: 'Diptyque', title: 'Exfoliating Volcanic Pumice Body Scrub', imageUrl: 'https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?q=80&w=800&auto=format&fit=crop', description: 'Fine ground lava stone and sweet almond paste that gently refines skin texture.' },
   { id: 94, category: 'beauty', brand: 'Chantecaille', title: 'Gold Infused Radiant Eye Concentrate', imageUrl: 'https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?q=80&w=800&auto=format&fit=crop', description: 'Peptide and 24k colloidal gold emulsion reducing puffiness and brightening the eye contour.' },
-  { id: 95, category: 'beauty', brand: 'Santa Maria Novella', title: 'Botanical Hydrating Facial Mist', imageUrl: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop', description: 'Rosewater distillate prepared according to 16th-century Dominican monastic recipes.' },
+  { id: 95, category: 'beauty', brand: 'Santa Maria Novella', title: 'Botanical Hydrating Facial Mist', imageUrl: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800&auto=format&fit=crop', description: 'Rosewater distillate prepared according to 16th-century Dominican monastic recipes.' },
   { id: 96, category: 'beauty', brand: 'Oribe', title: 'Argan & Neroli Hair Conditioning Elixir', imageUrl: 'https://images.unsplash.com/photo-1547887537-6158d64c35b3?q=80&w=800&auto=format&fit=crop', description: 'Ultra-lightweight dry oil imparting high gloss without weighing down fine strands.' },
   { id: 97, category: 'beauty', brand: 'Omorovicza', title: 'Mineral Clay Purifying Cleanser', imageUrl: 'https://images.unsplash.com/photo-1503236823255-94609f598e71?q=80&w=800&auto=format&fit=crop', description: 'Hungarian Moor mud enriched with calcium and magnesium to draw out daily impurities.' },
   { id: 98, category: 'beauty', brand: 'Jillian Dempsey', title: 'Rose Gold Micro-Current Sculpting Bar', imageUrl: 'https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?q=80&w=800&auto=format&fit=crop', description: '24-karat gold vibrating roller engineered to tone and contour facial muscles.' },
-  { id: 99, category: 'beauty', brand: 'Byredo', title: 'Rich Squalane Restorative Lip Serum', imageUrl: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=800&auto=format&fit=crop', description: 'Nourishing squalane and jojoba ester salve giving lasting moisture and subtle sheen.' },
+  { id: 99, category: 'beauty', brand: 'Byredo', title: 'Rich Squalane Restorative Lip Serum', imageUrl: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=800&auto=format&fit=crop', description: 'Nourishing squalane and jojoba ester salve giving lasting moisture and subtle sheen.' },
   { id: 100, category: 'beauty', brand: 'Amouage', title: 'Oud Royale Concentrated Perfume Oil', imageUrl: 'https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?q=80&w=800&auto=format&fit=crop', description: 'Pure attar combining wild Cambodian agarwood, taif rose, and crystalline ambergris.' },
 
   { id: 101, category: 'jewelry', brand: 'Vacheron Constantin', title: '18k Rose Gold Chronograph Watch', imageUrl: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=800&auto=format&fit=crop', description: 'Manual-wind column wheel chronograph with silvered opaline dial and alligator strap.' },
   { id: 102, category: 'jewelry', brand: 'Tiffany & Co.', title: 'Solitaire Brilliant Cut Diamond Ring', imageUrl: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=800&auto=format&fit=crop', description: 'Flawless round brilliant center stone mounted on slender platinum knife-edge band.' },
   { id: 103, category: 'jewelry', brand: 'David Yurman', title: 'Twisted Cable Bangle in Yellow Gold', imageUrl: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=800&auto=format&fit=crop', description: 'Signature sterling silver and 18-karat gold cable silhouette with pavé diamond caps.' },
   { id: 104, category: 'jewelry', brand: 'Cartier', title: 'Emerald & Diamond Art Deco Drop Earrings', imageUrl: 'https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?q=80&w=800&auto=format&fit=crop', description: 'Matched Zambian emerald drops suspended from graduated brilliant-cut diamond ribbons.' },
-  { id: 105, category: 'jewelry', brand: 'Boucheron', title: 'Hammered Gold Signet Ring', imageUrl: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=800&auto=format&fit=crop', description: 'Hand-finished satin gold face with beveled borders, perfect for bespoke monogramming.' },
-  { id: 106, category: 'jewelry', brand: 'Mikimoto', title: 'South Sea Pearl Pendant Necklace', imageUrl: 'https://images.unsplash.com/photo-1611591475152-47831138241f?q=80&w=800&auto=format&fit=crop', description: 'Lustrous 12mm white South Sea cultured pearl set in 18k white gold with diamond bail.' },
+  { id: 105, category: 'jewelry', brand: 'Boucheron', title: 'Hammered Gold Signet Ring', imageUrl: 'https://images.unsplash.com/photo-1603561591411-07134e71a2a9?q=80&w=800&auto=format&fit=crop', description: 'Hand-finished satin gold face with beveled borders, perfect for bespoke monogramming.' },
+  { id: 106, category: 'jewelry', brand: 'Mikimoto', title: 'South Sea Pearl Pendant Necklace', imageUrl: 'https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=800&auto=format&fit=crop', description: 'Lustrous 12mm white South Sea cultured pearl set in 18k white gold with diamond bail.' },
   { id: 107, category: 'jewelry', brand: 'Vespera Atelier', title: 'Open Cuff Bracelet in Polished Brass', imageUrl: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=800&auto=format&fit=crop', description: 'Sculpted architectural curve with soft brushed interior and high-mirror exterior.' },
   { id: 108, category: 'jewelry', brand: 'Patek Philippe', title: 'Perpetual Calendar Dress Watch', imageUrl: 'https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=800&auto=format&fit=crop', description: 'Grand complication displaying day, date, month, and moon phases on sunburst blue dial.' },
-  { id: 109, category: 'jewelry', brand: 'Harry Winston', title: 'Pavé Diamond Eternity Band', imageUrl: 'https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?q=80&w=800&auto=format&fit=crop', description: 'Continuous row of round brilliant diamonds hand-set in shared-prong platinum mounting.' },
-  { id: 110, category: 'jewelry', brand: 'De Beers', title: 'Lapis Lazuli Inlaid Cufflinks', imageUrl: 'https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?q=80&w=800&auto=format&fit=crop', description: 'Deep celestial lapis lazuli stones bezel-set in hand-polished 18k yellow gold.' },
+  { id: 109, category: 'jewelry', brand: 'Harry Winston', title: 'Pavé Diamond Eternity Band', imageUrl: 'https://images.unsplash.com/photo-1603561596112-0a132b757442?q=80&w=800&auto=format&fit=crop', description: 'Continuous row of round brilliant diamonds hand-set in shared-prong platinum mounting.' },
+  { id: 110, category: 'jewelry', brand: 'De Beers', title: 'Lapis Lazuli Inlaid Cufflinks', imageUrl: 'https://images.unsplash.com/photo-1590548784585-643d2b9f2925?q=80&w=800&auto=format&fit=crop', description: 'Deep celestial lapis lazuli stones bezel-set in hand-polished 18k yellow gold.' },
 
-  { id: 111, category: 'sports', brand: 'Brunello Cucinelli', title: 'Full-Grain Italian Leather Golf Bag', imageUrl: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=800&auto=format&fit=crop', description: 'Supple water-resistant calfskin bag with brass hardware and fleece-lined club dividers.' },
+  { id: 111, category: 'sports', brand: 'Brunello Cucinelli', title: 'Full-Grain Italian Leather Golf Bag', imageUrl: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?q=80&w=800&auto=format&fit=crop', description: 'Supple water-resistant calfskin bag with brass hardware and fleece-lined club dividers.' },
   { id: 112, category: 'sports', brand: 'Hock Design', title: 'Solid Walnut & Brass Dumbbell Set', imageUrl: 'https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?q=80&w=800&auto=format&fit=crop', description: 'Pair of precision-lathed walnut handles anchored by mirror-polished solid brass end bells.' },
-  { id: 113, category: 'sports', brand: 'Modest Vintage', title: 'Hand-Stitched Leather Boxing Gloves', imageUrl: 'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=800&auto=format&fit=crop', description: 'Waxed heavy cowhide with horsehair padding and traditional lace-up wrist closures.' },
-  { id: 114, category: 'sports', brand: 'Lululemon Atelier', title: 'Eco-Friendly Natural Rubber Yoga Mat', imageUrl: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=800&auto=format&fit=crop', description: 'Dense cushion with laser-etched alignment markings and non-slip polyurethane top.' },
-  { id: 115, category: 'sports', brand: 'Babolat Pro', title: 'Carbon Fiber Lightweight Padel Racket', imageUrl: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop', description: 'Aero-dynamic teardrop frame with EVA foam core and textured spin-matrix face.' },
-  { id: 116, category: 'sports', brand: 'Loro Piana', title: 'Cashmere Ribbed Athletic Track Jacket', imageUrl: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop', description: 'Sport-inspired zip sweater woven from stormwater-resistant Storm System cashmere.' },
-  { id: 117, category: 'sports', brand: 'Vespera Atelier', title: 'Handcrafted Wood Skipping Rope', imageUrl: 'https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=800&auto=format&fit=crop', description: 'Smooth ball-bearing swivels with oiled ash wood handles and weighted leather cord.' },
-  { id: 118, category: 'sports', brand: 'Omega Seamaster', title: 'Water-Resistant Titanium Dive Chronometer', imageUrl: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=800&auto=format&fit=crop', description: 'Ceramic bezel with 300m depth rating and helium escape valve on rubber strap.' },
-  { id: 119, category: 'sports', brand: 'Wilson Pro Staff', title: 'Stainless Steel Ergonomic Tennis Racket', imageUrl: 'https://images.unsplash.com/photo-1522898467493-49726bf28798?q=80&w=800&auto=format&fit=crop', description: 'Precision carbon-graphite braid with leather grip for supreme ball feedback.' },
-  { id: 120, category: 'sports', brand: 'Brunello Cucinelli', title: 'Cashmere & Wool Wellness Recovery Set', imageUrl: 'https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=800&auto=format&fit=crop', description: 'Plush post-training hoodie, matching tapered joggers, and cashmere eye mask.' },
+  { id: 113, category: 'sports', brand: 'Modest Vintage', title: 'Hand-Stitched Leather Boxing Gloves', imageUrl: 'https://images.unsplash.com/photo-1517438322307-e67111335449?q=80&w=800&auto=format&fit=crop', description: 'Waxed heavy cowhide with horsehair padding and traditional lace-up wrist closures.' },
+  { id: 114, category: 'sports', brand: 'Lululemon Atelier', title: 'Eco-Friendly Natural Rubber Yoga Mat', imageUrl: 'https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?q=80&w=800&auto=format&fit=crop', description: 'Dense cushion with laser-etched alignment markings and non-slip polyurethane top.' },
+  { id: 115, category: 'sports', brand: 'Babolat Pro', title: 'Carbon Fiber Lightweight Padel Racket', imageUrl: 'https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?q=80&w=800&auto=format&fit=crop', description: 'Aero-dynamic teardrop frame with EVA foam core and textured spin-matrix face.' },
+  { id: 116, category: 'sports', brand: 'Loro Piana', title: 'Cashmere Ribbed Athletic Track Jacket', imageUrl: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=800&auto=format&fit=crop', description: 'Sport-inspired zip sweater woven from stormwater-resistant Storm System cashmere.' },
+  { id: 117, category: 'sports', brand: 'Vespera Atelier', title: 'Handcrafted Wood Skipping Rope', imageUrl: 'https://images.unsplash.com/photo-1598289431512-b97b0917affc?q=80&w=800&auto=format&fit=crop', description: 'Smooth ball-bearing swivels with oiled ash wood handles and weighted leather cord.' },
+  { id: 118, category: 'sports', brand: 'Omega Seamaster', title: 'Water-Resistant Titanium Dive Chronometer', imageUrl: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=800&auto=format&fit=crop', description: 'Ceramic bezel with 300m depth rating and helium escape valve on rubber strap.' },
+  { id: 119, category: 'sports', brand: 'Wilson Pro Staff', title: 'Stainless Steel Ergonomic Tennis Racket', imageUrl: 'https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?q=80&w=800&auto=format&fit=crop', description: 'Precision carbon-graphite braid with leather grip for supreme ball feedback.' },
+  { id: 120, category: 'sports', brand: 'Brunello Cucinelli', title: 'Cashmere & Wool Wellness Recovery Set', imageUrl: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=800&auto=format&fit=crop', description: 'Plush post-training hoodie, matching tapered joggers, and cashmere eye mask.' },
 ]
 
 export function getProductDisplay(product?: {
@@ -170,31 +170,21 @@ export function getProductDisplay(product?: {
     }
   }
 
-  // 2. Keyword fallback for any custom or non-numbered product
-  const text = `${slug} ${title}`
-  let matched = LUXURY_120_CATALOG[0]
-
-  if (text.includes('shoe') || text.includes('boot') || text.includes('oxford') || text.includes('loafer')) {
-    matched = LUXURY_120_CATALOG[20]
-  } else if (text.includes('bag') || text.includes('tote') || text.includes('crossbody') || text.includes('clutch')) {
-    matched = LUXURY_120_CATALOG[35]
-  } else if (text.includes('speaker') || text.includes('headphone') || text.includes('audio') || text.includes('camera') || text.includes('electronic')) {
-    matched = LUXURY_120_CATALOG[50]
-  } else if (text.includes('vase') || text.includes('lamp') || text.includes('candle') || text.includes('chair') || text.includes('home')) {
-    matched = LUXURY_120_CATALOG[70]
-  } else if (text.includes('perfume') || text.includes('serum') || text.includes('oil') || text.includes('cream') || text.includes('beauty')) {
-    matched = LUXURY_120_CATALOG[85]
-  } else if (text.includes('ring') || text.includes('watch') || text.includes('pendant') || text.includes('earring') || text.includes('jewelry') || text.includes('gold')) {
-    matched = LUXURY_120_CATALOG[100]
-  } else if (text.includes('sport') || text.includes('gym') || text.includes('golf') || text.includes('fitness')) {
-    matched = LUXURY_120_CATALOG[110]
+  // 2. Deterministic hash fallback to guarantee NO duplicate image for any unnumbered product
+  let hash = 0
+  const seed = `${slug}-${title}-${product?.id || ''}`
+  for (let i = 0; i < seed.length; i++) {
+    hash = (hash << 5) - hash + seed.charCodeAt(i)
+    hash |= 0
   }
+  const positiveIndex = Math.abs(hash) % LUXURY_120_CATALOG.length
+  const fallback = LUXURY_120_CATALOG[positiveIndex]
 
   return {
-    title: product?.title && !product.title.includes('Performance') && !product.title.includes('Accent') ? product.title : matched.title,
-    brand: product?.brand && !product.brand.includes('VALOIR') ? product.brand : matched.brand,
-    imageUrl: matched.imageUrl,
-    description: matched.description,
+    title: product?.title && !product.title.includes('Performance') && !product.title.includes('Accent') ? product.title : fallback.title,
+    brand: product?.brand && !product.brand.includes('VALOIR') ? product.brand : fallback.brand,
+    imageUrl: fallback.imageUrl,
+    description: fallback.description,
   }
 }
 
