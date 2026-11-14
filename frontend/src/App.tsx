@@ -26,17 +26,13 @@ import {
   AdminOverviewPage,
   AdminBoutiquesPage,
   AdminProductsPage,
+  AdminOrdersPage,
+  AdminUsersPage,
+  AdminDisputesPage,
+  AdminAuditPage,
   AdminPlaceholder,
 } from '@/pages/admin/AdminDashboard'
-import {
-  PrivacyPage,
-  TermsPage,
-  ShippingPage,
-  ReturnsPage,
-  AboutPage,
-  FaqPage,
-  ContactPage,
-} from '@/pages/legal/LegalPages'
+import { PrivacyPage, TermsPage, ShippingPage, ReturnsPage, AboutPage, FaqPage, ContactPage } from '@/pages/legal/LegalPages'
 
 const qc = new QueryClient({
   defaultOptions: { queries: { staleTime: 30_000, refetchOnWindowFocus: false } },
@@ -61,7 +57,7 @@ function SellerShell() {
   const { t } = useI18n()
   return (
     <SellerLayout
-      title="Seller"
+      title="Seller Atelier"
       links={[
         { to: '/seller', label: t.seller.overview },
         { to: '/seller/products', label: t.seller.products },
@@ -140,10 +136,10 @@ export default function App() {
                   <Route index element={<AdminOverviewPage />} />
                   <Route path="boutiques" element={<AdminBoutiquesPage />} />
                   <Route path="products" element={<AdminProductsPage />} />
-                  <Route path="orders" element={<AdminPlaceholder title="Orders" />} />
-                  <Route path="users" element={<AdminPlaceholder title="Users" />} />
-                  <Route path="disputes" element={<AdminPlaceholder title="Disputes" />} />
-                  <Route path="audit" element={<AdminPlaceholder title="Audit log" />} />
+                  <Route path="orders" element={<AdminOrdersPage />} />
+                  <Route path="users" element={<AdminUsersPage />} />
+                  <Route path="disputes" element={<AdminDisputesPage />} />
+                  <Route path="audit" element={<AdminAuditPage />} />
                 </Route>
               </Route>
 
