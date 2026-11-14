@@ -2,6 +2,7 @@ import { Link, NavLink, Outlet } from 'react-router-dom'
 import { clsx } from 'clsx'
 import { ChevronRight, Store, ArrowLeft } from 'lucide-react'
 
+// 1. DashboardLayout الأصلي (لحساب الأدمن والمشتري - نظيف تماماً وبألوانه الأصلية)
 export function DashboardLayout({
   title,
   links,
@@ -10,8 +11,45 @@ export function DashboardLayout({
   links: { to: string; label: string }[]
 }) {
   return (
+    <div className="container-lux py-10">
+      <h1 className="section-title mb-8">{title}</h1>
+      <div className="grid gap-8 lg:grid-cols-[220px_1fr]">
+        <nav className="flex flex-row gap-2 overflow-x-auto lg:flex-col lg:gap-1">
+          {links.map((l) => (
+            <NavLink
+              key={l.to}
+              to={l.to}
+              end={l.to.split('/').length <= 3}
+              className={({ isActive }) =>
+                clsx(
+                  'whitespace-nowrap rounded-sm px-3 py-2 text-sm transition',
+                  isActive ? 'bg-charcoal text-ivory dark:bg-champagne dark:text-charcoal' : 'hover:bg-black/5 dark:hover:bg-white/5',
+                )
+              }
+            >
+              {l.label}
+            </NavLink>
+          ))}
+          <Link to="/" className="px-3 py-2 text-sm text-[var(--muted)]">← Home</Link>
+        </nav>
+        <div className="min-w-0">
+          <Outlet />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// 2. SellerLayout الخاص بالبائع فقط (فاخر وداكن بلمسات ذهبية)
+export function SellerLayout({
+  title,
+  links,
+}: {
+  title: string
+  links: { to: string; label: string }[]
+}) {
+  return (
     <div className="min-h-screen bg-[#070709] text-white">
-      {/* Subtle Ambient Gold Glow Header */}
       <div className="border-b border-neutral-800/80 bg-[#0c0c10]/70 backdrop-blur-md sticky top-0 z-30">
         <div className="container-lux mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -32,7 +70,6 @@ export function DashboardLayout({
 
       <div className="container-lux mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid gap-8 lg:grid-cols-[240px_1fr]">
-          {/* Sidebar for Desktop / Horizontal Nav for Mobile */}
           <aside className="shrink-0">
             <nav className="flex flex-row gap-2 overflow-x-auto pb-2 lg:pb-0 lg:flex-col lg:gap-1.5 p-1 rounded-2xl bg-[#0e0e13]/80 border border-neutral-800/80 backdrop-blur-sm">
               <div className="hidden lg:block px-4 py-3 border-b border-neutral-800/60 mb-1">
@@ -71,7 +108,6 @@ export function DashboardLayout({
             </nav>
           </aside>
 
-          {/* Main Content Area */}
           <main className="min-w-0">
             <div className="rounded-2xl border border-neutral-800/80 bg-[#0a0a0e]/60 p-6 sm:p-8 backdrop-blur-sm shadow-xl">
               <Outlet />

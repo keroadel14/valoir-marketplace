@@ -2,7 +2,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { I18nProvider, useI18n } from '@/i18n'
 import { MainLayout } from '@/layouts/MainLayout'
-import { DashboardLayout } from '@/layouts/DashboardLayout'
+import { DashboardLayout, SellerLayout } from '@/layouts/DashboardLayout'
 import { ProtectedRoute } from '@/components/auth/ProtectedRoute'
 import { HomePage } from '@/pages/public/HomePage'
 import { ShopPage } from '@/pages/public/ShopPage'
@@ -22,8 +22,21 @@ import {
   SellerOrdersPage,
   SellerStorePage,
 } from '@/pages/seller/SellerPages'
-import { AdminOverviewPage, AdminBoutiquesPage, AdminProductsPage, AdminPlaceholder } from '@/pages/admin/AdminDashboard'
-import { PrivacyPage, TermsPage, ShippingPage, ReturnsPage, AboutPage, FaqPage, ContactPage } from '@/pages/legal/LegalPages'
+import {
+  AdminOverviewPage,
+  AdminBoutiquesPage,
+  AdminProductsPage,
+  AdminPlaceholder,
+} from '@/pages/admin/AdminDashboard'
+import {
+  PrivacyPage,
+  TermsPage,
+  ShippingPage,
+  ReturnsPage,
+  AboutPage,
+  FaqPage,
+  ContactPage,
+} from '@/pages/legal/LegalPages'
 
 const qc = new QueryClient({
   defaultOptions: { queries: { staleTime: 30_000, refetchOnWindowFocus: false } },
@@ -47,8 +60,8 @@ function BuyerShell() {
 function SellerShell() {
   const { t } = useI18n()
   return (
-    <DashboardLayout
-      title="Boutique Portal"
+    <SellerLayout
+      title="Seller"
       links={[
         { to: '/seller', label: t.seller.overview },
         { to: '/seller/products', label: t.seller.products },
