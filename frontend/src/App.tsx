@@ -16,7 +16,12 @@ import { CheckoutPage } from '@/pages/buyer/CheckoutPage'
 import { WishlistPage } from '@/pages/buyer/WishlistPage'
 import { AccountOverview } from '@/pages/buyer/AccountPage'
 import { OrdersPage } from '@/pages/buyer/OrdersPage'
-import { SellerOverview, SellerProductsPage } from '@/pages/seller/SellerPages'
+import {
+  SellerOverview,
+  SellerProductsPage,
+  SellerOrdersPage,
+  SellerStorePage,
+} from '@/pages/seller/SellerPages'
 import { AdminOverviewPage, AdminBoutiquesPage, AdminProductsPage, AdminPlaceholder } from '@/pages/admin/AdminDashboard'
 import { PrivacyPage, TermsPage, ShippingPage, ReturnsPage, AboutPage, FaqPage, ContactPage } from '@/pages/legal/LegalPages'
 
@@ -43,7 +48,7 @@ function SellerShell() {
   const { t } = useI18n()
   return (
     <DashboardLayout
-      title="Seller"
+      title="Boutique Portal"
       links={[
         { to: '/seller', label: t.seller.overview },
         { to: '/seller/products', label: t.seller.products },
@@ -112,8 +117,8 @@ export default function App() {
                 <Route path="seller" element={<SellerShell />}>
                   <Route index element={<SellerOverview />} />
                   <Route path="products" element={<SellerProductsPage />} />
-                  <Route path="orders" element={<AdminPlaceholder title="Seller orders" />} />
-                  <Route path="store" element={<AdminPlaceholder title="Store profile" />} />
+                  <Route path="orders" element={<SellerOrdersPage />} />
+                  <Route path="store" element={<SellerStorePage />} />
                 </Route>
               </Route>
 
